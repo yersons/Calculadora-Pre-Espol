@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calculadora Pre ESPOL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+  <header>
+    <button id="toggleTheme" class="btn toggle">Modo oscuro</button>
+  </header>
+
+  <div class="wrap">
+    <h1>Calculadora Pre ESPOL</h1>
+
+    <div class="card">
+      <div class="grid">
+        <div class="field">
+          <label for="leccion">Lección general (20%)</label>
+          <input type="number" id="leccion" min="0" max="100" step="1" placeholder="0–100" />
+        </div>
+
+        <div class="field">
+          <label for="examen">Examen final (50%)</label>
+          <input type="number" id="examen" min="0" max="100" step="1" placeholder="0–100" />
+        </div>
+
+        <div class="field">
+          <label for="mejora">Examen de mejoramiento (opcional)</label>
+          <input type="number" id="mejora" min="0" max="100" step="1" placeholder="0–100" />
+        </div>
+
+        <div class="field">
+          <label for="pruebas">Pruebas de salida (10%)</label>
+          <input type="number" id="pruebas" min="0" max="100" step="1" placeholder="0–100" />
+        </div>
+
+        <div class="field">
+          <label for="controles">Controles de lectura (5%)</label>
+          <input type="number" id="controles" min="0" max="100" step="1" placeholder="0–100" />
+        </div>
+
+        <div class="field">
+          <label for="talleres">Talleres grupales (5%)</label>
+          <input type="number" id="talleres" min="0" max="100" step="1" placeholder="0–100" />
+        </div>
+
+        <div class="field">
+          <label for="tareas">Tareas (10%)</label>
+          <input type="number" id="tareas" min="0" max="100" step="1" placeholder="0–100" />
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="calcular" class="btn primary">Calcular</button>
+      </div>
+
+      <div class="result">
+        <div class="final" id="resultado">0.0</div>
+        <div class="state" id="estado">–</div>
+        <div class="subtle">
+          Componente 70%: <span id="sub70">0.0 / 70</span> ·
+          Componente 30%: <span id="sub30">0.0 / 30</span>
+        </div>
+        <div class="pill">Usando: <span id="origen">Lección + Examen final</span></div>
+        <div id="necesita" class="need"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
